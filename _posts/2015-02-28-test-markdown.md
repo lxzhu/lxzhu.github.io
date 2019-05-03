@@ -75,4 +75,4 @@ You can add notification, warning and error boxes like this:
 {: .box-error}
 **Error:** This is an error box.
 
-$$f(x)=ax^2+b$$
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
