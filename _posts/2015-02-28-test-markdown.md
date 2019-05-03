@@ -6,7 +6,7 @@ gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [test]
 js:
-  - js/mathjax.js
+  - /js/mathjax.js
 comments: true
 ---
 
