@@ -73,4 +73,3 @@ You can add notification, warning and error boxes like this:
 {: .box-error}
 **Error:** This is an error box.
 
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
