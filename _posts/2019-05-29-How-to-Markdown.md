@@ -2,7 +2,7 @@
 layout: post
 title: How to markdown
 subtitle: Each post also has a subtitle
-gh-repo: daattali/beautiful-jekyll
+gh-repo: lxzhu/lxzhu.github.io
 gh-badge: [star, fork, follow]
 tags: [markdown]
 comments: true
