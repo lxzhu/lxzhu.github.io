@@ -55,6 +55,7 @@ __boolean__: a boolean variable is either __True__ or __False__. However, __None
 
 __common sequence operations:__
 assume _s_ and _t_ are sequences and _x_ is the same type as element in _s_
+
 | operation | description |
 |---|---|
 |x in s             | |
