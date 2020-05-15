@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Markdown examples
+title: How to write a post in this site
 subtitle: a list of examples
 tags: [markdown, MathJax]
 comments: true
