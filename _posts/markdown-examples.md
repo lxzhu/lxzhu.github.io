@@ -2,7 +2,7 @@
 layout: post
 title: Markdown examples
 subtitle: a list of examples
-tags: [markdown]
+tags: [markdown, MathJax]
 comments: true
 ---
 
