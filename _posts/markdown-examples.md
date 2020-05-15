@@ -1,9 +1,7 @@
 ---
 layout: post
-title: How to markdown
-subtitle: Each post also has a subtitle
-gh-repo: lxzhu/lxzhu.github.io
-gh-badge: [star, fork, follow]
+title: Markdown examples
+subtitle: a list of examples
 tags: [markdown]
 comments: true
 ---
