@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Python Introduction
-subtitle: To get the point of python
+title: Python Cheet Sheet
+subtitle: a simple & quick introduction to python 3
 tags: [python]
 ---
 
