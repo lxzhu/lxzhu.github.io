@@ -8,18 +8,18 @@ tags: [python]
 Maybe [Python official website](https://www.python.org/) is a better place to go.
 
 This post is a list of things that will be useful when you start to use python. 
-## basic types
+## Basic types
 
-## array in python
+## Array in python
 
-## dictionary in python
+## Dictionary in python
 
-## how to declare a class
+## How to declare a class
 
-## how to inherit a class, override a method
+## How to inherit a class, override a method
 
-## how to declare an protocol 
+## How to declare an protocol 
 
-## read and write local file
+## Read and write local file
 
-## network requests
+## Network requests
