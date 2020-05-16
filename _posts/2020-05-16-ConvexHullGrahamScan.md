@@ -4,7 +4,7 @@ subtitle: an implementation in Python
 tags: [Convex Hull, Graham's Scan, Python]
 ---
 
-In this post, I implement Graham's Scan algorithm to get convex hull of a list of points. Graham's Scan algorithm contains a step to sort points by reversed polar angles. So a sort algorithm with supporting of customized comparing function is needed. I makde a customized version of [Quick Sort](/2020-05-16-QuickSortInPython)
+In this post, I implement Graham's Scan algorithm to get convex hull of a list of points. Graham's Scan algorithm contains a step to sort points by reversed polar angles. So a sort algorithm with supporting of customized comparing function is needed. I makde a customized version of [Quick Sort](/2020-05-16-QuickSortInPython){:target="_blank"}
 
 matplotlib is used to show the construction process step by step. It is not the essential part of the algorithm so it is safe to remove all codes relates to plot.
 
