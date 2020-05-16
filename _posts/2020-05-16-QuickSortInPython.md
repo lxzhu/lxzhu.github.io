@@ -28,7 +28,6 @@ The main process of quick sort is a divide and conquer strategy. The algorithm d
 # 
 # Parameter compare is added to support comparing two elements
 # in any way the user would like to instead of just by key. 
-
 # Comparing by key is supported as well.
 
 class QuickSort:
@@ -57,7 +56,8 @@ class QuickSort:
         pivot=items[high]
         
         # index of the last smaller element.
-        # the main process of this algorithm is moving elements smaller than pivot to the left side.
+        # the main process of this algorithm is moving elements 
+        # smaller than pivot to the left side.
         # this index is used to record index of the last smaller elements, 
         # so that we can move the current element to lastSmallerElementIndex+1
         # if current element is less than pivot.
@@ -109,6 +109,10 @@ class QuickSort:
         #     for any x in items[low,lastSmallerElementIndex+1-1] 
         #     for any y in items[lastSmallerElementIndex+1+1]
         #     exists x < pivot <= y
-        items[lastSmallerElementIndex+1],items[high]=items[high],items[lastSmallerElementIndex+1]
+        items[lastSmallerElementIndex+1],items[high]= \
+        items[high],items[lastSmallerElementIndex+1]
+        
         return lastSmallerElementIndex+1
 ```
+
+
