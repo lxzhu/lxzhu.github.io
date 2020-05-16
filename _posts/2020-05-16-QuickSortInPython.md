@@ -98,21 +98,22 @@ class QuickSort:
                 
         # move the pivot to its correct position
         #
-        # in the last step of previous loop, 
-        # the current element and the pivot element are the same, 
-        # the pivot will not be moved.
+        # range(low, high) is [low, high) which means high is not visited 
         # 
-        # so we need to move the pivot element to lastSmallerElementIndex +1
-        # which also means the pivotIndex after moving is lastSmallerElementIndex+1
+        # after the loop, we are sure that items[low,lastSmallerElementIndex] are less than pivot
+        # and items[lastSmallerElementIndex,high-1] are great than or equals to pivot
+        #
+        # we move the pivot element to lastSmallerElementIndex +1
+        # which also means the pivotIndex after moving will be lastSmallerElementIndex+1
         
         # after this step, we are sure that 
         #     for any x in items[low,lastSmallerElementIndex+1-1] 
         #     for any y in items[lastSmallerElementIndex+1+1]
         #     exists x < pivot <= y
-        items[lastSmallerElementIndex+1],items[high]= \
-        items[high],items[lastSmallerElementIndex+1]
+        pivotIndex = lastSmallerElementIndex+1
+        items[pivotIndex],items[high] = items[high],items[pivotIndex]
         
-        return lastSmallerElementIndex+1
+        return pivotIndex
 ```
 
 
