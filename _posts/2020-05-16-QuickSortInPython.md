@@ -1,6 +1,6 @@
 ---
 title: Quick sort in Python
-subtitle: support comparing function
+subtitle: with supporting of customized comparing function
 tags: [Python, Quick Sort, Algorithm]
 ---
 
