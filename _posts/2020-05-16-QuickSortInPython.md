@@ -32,18 +32,15 @@ class QuickSort:
     def sort(items,compare=None,key=None,reverse=False):
         if len(items)<=1:
             return;
-        QuickSort.__sort(items,0,len(items)-1,compare,key,reverse);
+        QuickSort.__sort(items,0,len(items)-1,compare,key,reverse)
     
     @staticmethod
     def __sort(items,low:int,high:int,compare,key,reverse):
         if low<high:
-            pi = QuickSort.__partition(items,low,high,compare,key,reverse);
-            QuickSort.__sort(items,low,pi-1,compare,key,reverse);
-            QuickSort.__sort(items,pi+1,high,compare,key,reverse);
-        
-    #
-    # this method take last element as pivot
-    #
+            pi = QuickSort.__partition(items,low,high,compare,key,reverse)
+            QuickSort.__sort(items,low,pi-1,compare,key,reverse)
+            QuickSort.__sort(items,pi+1,high,compare,key,reverse)
+    
     @staticmethod
     def __partition(items,low:int,high:int,compare,key,reverse:bool):
         
@@ -52,7 +49,7 @@ class QuickSort:
         # this partition method must guarentee:
         #   1. returns an index pi inside the range of (low, high).
         #   2. for any x in items[low:pi-1] and any y in items[pi+1,hight], 
-        #      exists x<=items[pi]<y
+        #      exists x<items[pi]<=y
         pivot=items[high]
         
         # index of the last smaller element.
@@ -63,11 +60,15 @@ class QuickSort:
         lastSmallerElementIndex=low-1
         
         # to support comparing by key
+        # use the element as key when key function is not provided.
         pivotKey=pivot
         if not key==None:
             pivotKey=key(pivot)
             
-        
+        # go through each element in items[low:high]
+        # if it is less than the pivot element, 
+        #  1. move it to items[lastSmallerElementIndex+1]
+        #  2. advance lastSmallerElementIndex a step
         for currentIndex in range(low,high):
             current=items[currentIndex]
             currentKey=current
@@ -75,6 +76,8 @@ class QuickSort:
                 currentKey=key(current)
                 
             isLessThan=False
+            
+            # if comare is not presented, fallback to ordinary < operator
             if compare == None:
                 isLessThan = currentKey < pivotKey
             else:
@@ -89,7 +92,19 @@ class QuickSort:
                 lastSmallerElementIndex=lastSmallerElementIndex+1
                 
                 
-        # i+1 is the         
+        # move the pivot to its correct position
+        #
+        # in the last step of previous loop, 
+        # the current element and the pivot element are the same, 
+        # the pivot will not be moved.
+        # 
+        # so we need to move the pivot element to lastSmallerElementIndex +1
+        # which also means the pivotIndex after moving is lastSmallerElementIndex+1
+        
+        # after this step, we are sure that 
+        #     for any x in items[low,lastSmallerElementIndex+1-1] 
+        #     for any y in items[lastSmallerElementIndex+1+1]
+        #     exists x < pivot <= y
         items[lastSmallerElementIndex+1],items[high]=items[high],items[lastSmallerElementIndex+1]
         return lastSmallerElementIndex+1
 ```
