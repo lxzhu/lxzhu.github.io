@@ -26,23 +26,29 @@ The main process of quick sort is a divide and conquer strategy. The algorithm d
 # The builtin sort method in Python supports a key function to extract key from element.
 # It is not enough to implement Graham's Scan algorithm
 # 
-# Parameter compare is added to support comparing two elements
-# in any way the user would like to instead of just by key. 
+# Paramter compare is added to support user of this algorithm to compare two elements
+# in any way they would like instead of just by comparing key. 
+
 # Comparing by key is supported as well.
 
 class QuickSort:
-    @staticmethod
-    def sort(items,compare=None,key=None,reverse=False):
-        if len(items)<=1:
-            return;
-        QuickSort.__sort(items,0,len(items)-1,compare,key,reverse)
     
+    @staticmethod
+    def sort(items,low:int=None,high:int=None,compare=None,key=None,reverse=False):
+        if low == None or low <0:
+            low=0
+        if high ==None or high>len(items)-1:
+            high=len(items)-1
+        if low > high:
+            low, high=high, low
+        QuickSort.__sort(items,low,high,compare,key,reverse)
+        
     @staticmethod
     def __sort(items,low:int,high:int,compare,key,reverse):
         if low<high:
-            pi = QuickSort.__partition(items,low,high,compare,key,reverse)
-            QuickSort.__sort(items,low,pi-1,compare,key,reverse)
-            QuickSort.__sort(items,pi+1,high,compare,key,reverse)
+            pi = QuickSort.__partition(items,low,high,compare,key,reverse);
+            QuickSort.__sort(items,low,pi-1,compare,key,reverse);
+            QuickSort.__sort(items,pi+1,high,compare,key,reverse);
     
     @staticmethod
     def __partition(items,low:int,high:int,compare,key,reverse:bool):
@@ -56,8 +62,7 @@ class QuickSort:
         pivot=items[high]
         
         # index of the last smaller element.
-        # the main process of this algorithm is moving elements 
-        # smaller than pivot to the left side.
+        # the main process of this algorithm is moving elements smaller than pivot to the left side.
         # this index is used to record index of the last smaller elements, 
         # so that we can move the current element to lastSmallerElementIndex+1
         # if current element is less than pivot.
@@ -115,5 +120,12 @@ class QuickSort:
         
         return pivotIndex
 ```
-
+I write this simple code to test it. This code snippet should sort the first 6 elements in the items.
+```python
+import numpy as np
+items = np.random.randint(0,100,10);
+print(items)
+QuickSort.sort(items,0,6)
+print(items)
+```
 
