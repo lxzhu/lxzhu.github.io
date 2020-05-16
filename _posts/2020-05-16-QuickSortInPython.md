@@ -6,7 +6,7 @@ tags: [Python, Quick Sort, Algorithm]
 
 This is a part of Python learning process.
 
-I would like to write Graham's Scan algorithm to compute convex hull in Python. There is a step to sort points by reversed polar angles. The builtin sort method in Python supports a key function to extract key from element. It is not enough to implement Graham's Scan algorithm. Paramter compare is added to support user of this algorithm to compare two elements in any way they would like instead of just by comparing key. 
+I would like to write Graham's Scan algorithm to compute convex hull in Python. There is a step to sort points by reversed polar angles. The builtin sort method in Python supports a key function to extract key from element. It is not enough to implement Graham's Scan algorithm. Parameter compare is added to support comparing two elements in any way the user would like to instead of just by key. 
 
 ```Python
 #
@@ -22,8 +22,8 @@ I would like to write Graham's Scan algorithm to compute convex hull in Python. 
 # The builtin sort method in Python supports a key function to extract key from element.
 # It is not enough to implement Graham's Scan algorithm
 # 
-# Paramter compare is added to support user of this algorithm to compare two elements
-# in any way they would like instead of just by comparing key. 
+# Parameter compare is added to support comparing two elements
+# in any way the user would like to instead of just by key. 
 
 # Comparing by key is supported as well.
 
