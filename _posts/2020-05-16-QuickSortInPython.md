@@ -17,6 +17,9 @@ The main process of quick sort is a divide and conquer strategy. The algorithm d
 # author: Liangxiong Zhu
 # date: 2020-05-16
 # contact: lxzhu@outlook.com
+# license: The author does not guarantee the quality of this code. 
+#.         You take all the responsibilities, not matter good or bad, if you use this code.
+#          Keep THIS comment block, then you are licensed.
 #
 
 # This is a part of Python learning process.
@@ -120,12 +123,7 @@ class QuickSort:
         
         return pivotIndex
 ```
-I write this simple code to test it. This code snippet should sort the first 6 elements in the items.
-```python
-import numpy as np
-items = np.random.randint(0,100,10);
-print(items)
-QuickSort.sort(items,0,6)
-print(items)
-```
+
+TODO:
+Unit tests SHOULD and VERY LIKELY be supplied later.
 
