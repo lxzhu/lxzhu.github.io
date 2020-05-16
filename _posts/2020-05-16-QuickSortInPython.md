@@ -12,7 +12,7 @@ The main process of quick sort is a divide and conquer strategy. The algorithm d
 
 
 
-```Python
+```python
 #
 # author: Liangxiong Zhu
 # date: 2020-05-16
