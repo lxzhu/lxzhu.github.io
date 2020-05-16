@@ -6,7 +6,7 @@ tags: [Python, Quick Sort, Algorithm]
 
 This is a part of Python learning process.
 
-I would like to write Graham's Scan algorithm to compute convex hull in Python. There is a step to sort points by reversed polar angles. The builtin sort method in Python supports a key function to extract key from element. It is not enough to implement Graham's Scan algorithm. Parameter compare is added to support comparing two elements in any way the user would like to instead of just by key. 
+I would like to write Graham's Scan algorithm to compute convex hull in Python. There is a step to sort points by reversed polar angles. The builtin sort method in Python supports a key function to extract key from element, then comparing elements by key. It is not enough to implement Graham's Scan algorithm. Parameter compare is added to support comparing two elements in any way the user would like to instead of just by key. 
 
 The main process of quick sort is a divide and conquer strategy. The algorithm divid the input into (left part, pivot element, right part) three parts. During the dividing, the algorithm move elements to make sure that all elements in left part are less than pivot element, while all elements in right part are great than or equals the pivot element. Then the algorithm do the same thing for the left part and right part recursively until the left part and right part becomes single element.
 
