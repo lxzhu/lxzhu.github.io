@@ -1,6 +1,6 @@
 ---
 title: Ubuntu package management
-tags:[linux, ubuntu, apt, apt-get, apt-cache, dpkg]
+tags: [linux, ubuntu, apt, apt-get, apt-cache, dpkg]
 ---
 
 这本文章试图总结日常工作中用到的和软件包管理有关的命令。对这个问题，ubuntu有官方文档。
