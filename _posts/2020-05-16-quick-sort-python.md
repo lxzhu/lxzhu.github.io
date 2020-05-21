@@ -65,7 +65,8 @@ class QuickSort:
         pivot=items[high]
         
         # index of the last smaller element.
-        # the main process of this algorithm is moving elements smaller than pivot to the left side.
+        # the main process of this algorithm is moving elements smaller than 
+        # pivot to the left side.
         # this index is used to record index of the last smaller elements, 
         # so that we can move the current element to lastSmallerElementIndex+1
         # if current element is less than pivot.
@@ -108,11 +109,13 @@ class QuickSort:
         #
         # range(low, high) is [low, high) which means high is not visited 
         # 
-        # after the loop, we are sure that items[low,lastSmallerElementIndex] are less than pivot
-        # and items[lastSmallerElementIndex,high-1] are great than or equals to pivot
+        # after the loop, we are sure that items[low,lastSmallerElementIndex] 
+        # are less than pivot and items[lastSmallerElementIndex,high-1] are 
+        # great than or equals to pivot
         #
         # we move the pivot element to lastSmallerElementIndex +1
-        # which also means the pivotIndex after moving will be lastSmallerElementIndex+1
+        # which also means the pivotIndex after moving will be 
+        # lastSmallerElementIndex+1
         
         # after this step, we are sure that 
         #     for any x in items[low,lastSmallerElementIndex+1-1] 
