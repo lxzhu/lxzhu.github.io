@@ -62,13 +62,14 @@ class GrahamScan:
 
     def getLowestPointIndex(self,points:[Point]):
         # This is a little special in Python3: integer in Pythopn3 is unbounded. 
-        # When integer is unbounded, we can not initialize the minPointX to something like int.MIN_VALUE.
+        # When integer is unbounded, we can not initialize the minPointX to 
+        # something like int.MIN_VALUE.
         # 
-        # In Python3, it is possible to put any number into an integer no matter how large it is.
-        # For example, the largest number of a 64 bits integer is 2^63-1. However, if you put 2^63 into a variable, Python3 will accept it 
-        # and handle it correctly. 
-        #
-        # When a number is too large to be handled by the hardware, Python3 handle it in software.
+        # In Python3, it is possible to put any number into an integer no matter
+        # how large it is. For example, the largest number of a 64 bits integer 
+        # is 2^63-1. However, if you put 2^63 into a variable, Python3 will 
+        # accept it and handle it correctly. When a number is too large to be 
+        # handled by the hardware, Python3 handle it in software.
         minPointY=points[0].y
         minPointIndex=0
         for index in range(len(points)):
@@ -82,8 +83,9 @@ class GrahamScan:
         # based on these three points, we construct two lines (pt1,pt3) and (pt1,pt2)
         # slot(pt1,pt3) is: (pt3.y-pt1.y)/(pt3.x-pt1.x)
         # slot(pt1,pt2) is: (pt2.y-pt1.y)/(pt2.x-pt1.x)
-        # when pt1, pt2 and pt3 makes a left turn, line (pt1,pt3) is on the left of line (pt1, pt2)
-        # so slot(pt1,pt3)>slot(pt1,pt2)
+        # when pt1, pt2 and pt3 makes a left turn, line (pt1,pt3) is on the left
+        # of line (pt1, pt2) so slot(pt1,pt3)>slot(pt1,pt2)
+        # 
         # (pt3.y-pt1.y)/(pt3.x-pt1.x) > (pt2.y-pt1.y)/(pt2.x-pt1.x)
         # =>(pt3.y-pt1.y)*(pt2.x-pt1.x)>(pt2.y-pt1.y)*(pt3.x-pt1.x)
         # =>(pt3.y-pt1.y)*(pt2.x-pt1.x)-(pt2.y-pt1.y)*(pt3.x-pt1.x)>0
@@ -137,7 +139,9 @@ class GrahamScan:
                 plt.plot([e.x for e in points],[e.y for e in points], "r--")
                 hasPlot=True
             if not hull == None:
-                plt.plot([e.x for e in hull],[e.y for e in hull],"--",color="blue",linewidth=5 );
+                hullx=[e.x for e in hull]
+                hully=[e.y for e in hull]
+                plt.plot(hullx, hully, "--",color="blue",linewidth=5 );
                 hasPlot=True
             if hasPlot:
                 plt.show()
