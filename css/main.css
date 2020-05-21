@@ -14,11 +14,8 @@ body {
         {
             site.page-col
         }
-    }
-    ;
-    {
-        % if site.page-img %
-    }
+    };
+    {% if site.page-img %}
     background-image: url({{ site.page-img }});
     background-attachment: fixed;
     {
@@ -984,4 +981,10 @@ td.gutter {
     color: #808080;
     font-style: italic;
     font-size: 16px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 1200px;
+    }
 }
