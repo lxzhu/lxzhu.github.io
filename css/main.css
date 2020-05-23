@@ -982,9 +982,3 @@ td.gutter {
     font-style: italic;
     font-size: 16px;
 }
-
-@media (min-width: 992px) {
-    .container {
-        width: 1200px;
-    }
-}
