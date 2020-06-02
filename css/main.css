@@ -18,9 +18,7 @@ body {
     {% if site.page-img %}
     background-image: url({{ site.page-img }});
     background-attachment: fixed;
-    {
-        % endif %
-    }
+    {% endif %}
 }
 
 p {
@@ -162,14 +160,10 @@ img {
     Helvetica,
     Arial,
     sans-serif;
-    {
-        % if site.navbar-img %
-    }
+    {% if site.navbar-img %}
     background-image: url({{ site.navbar-img }});
     background-attachment: fixed;
-    {
-        % endif %
-    }
+    {% endif %}
 }
 
 .navbar-custom .nav li a {
@@ -356,16 +350,11 @@ footer {
         {
             site.footer-col
         }
-    }
-    ;
-    {
-        % if site.footer-img %
-    }
+    };
+    {% if site.footer-img %}
     background-image: url({{ site.footer-img }});
     background-attachment: fixed;
-    {
-        % endif %
-    }
+    {% endif %}
 }
 
 footer p.text-muted {
