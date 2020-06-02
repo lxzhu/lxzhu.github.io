@@ -82,4 +82,6 @@ Anyway this is my simple list
 1. host: find ip by host name or find host name by ip
 1. netstat:  Netstat (Network Statistic) command display connection info, routing table information etc. [20 Netstat Command Examples in Linux.](https://www.tecmint.com/20-netstat-commands-for-linux-network-management/){:target="blank"}
 1. arp: ARP (Address Resolution Protocol) is useful to view / add the contents of the kernel’s ARP tables.
+1. telnet: connect to a remove server
+1. ssh: ssh to remote server
 
