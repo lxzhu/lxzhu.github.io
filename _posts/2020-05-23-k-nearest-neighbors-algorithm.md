@@ -8,7 +8,7 @@ This is a part of learning Python and Machine Learning.
 
 [kNN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm){:target="blank"} might be the simplest machine learning algorithm. In this post, i will implementthe algorithm and test with mnist dataset.
 
-**The primary principle of kNN** is think all the data records are points in space, the nearest k points vote, according to their own label, to elect a label for the test point.  There are two points that might change the error rate of this algorithm:
+**The primary principle of kNN** is thinking all the data records are points in space, and the nearest k points vote, according to their own label, to elect a label for the test point.  There are two points that might change the error rate of this algorithm:
 
 1. the measurement of distance. In this post, [Euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance){:target="blank"} is used.
 1. the weight of each points.
