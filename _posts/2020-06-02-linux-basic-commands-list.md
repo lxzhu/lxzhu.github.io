@@ -71,4 +71,15 @@ Anyway this is my simple list
 1. expr: evaluate expressions
 
 # network
+
 1. hostname: the hostname of current 
+1. ifconfig: config network adapter
+1. iwconfig: config wifi network adapter information
+1. ping: ping a computer
+1. traceroute: see how you connects to a server. for example: traceroute google.com
+1. dig: domain information groper
+1. nslookup: lookup dns information
+1. host: find ip by host name or find host name by ip
+1. netstat:  Netstat (Network Statistic) command display connection info, routing table information etc. [20 Netstat Command Examples in Linux.](https://www.tecmint.com/20-netstat-commands-for-linux-network-management/){:target="blank"}
+1. arp: ARP (Address Resolution Protocol) is useful to view / add the contents of the kernel’s ARP tables.
+
