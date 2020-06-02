@@ -3,7 +3,9 @@ title: Linux Basic Commands
 tags: [Linux]
 ---
 
-This is a incomplete list. I will come back when i use new command.
+[GNU Coreutils](https://www.gnu.org/software/coreutils/manual/html_node/index.html){:target="blank"} is a better place to go.
+
+Anyway this is my simple list
 
 ## man
 1. man command is the command to show manual of other commands.
