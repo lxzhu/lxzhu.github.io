@@ -1,6 +1,6 @@
 ---
 title: Linux Basic Commands
-tags:[Linux]
+tags: [Linux]
 ---
 
 This is a incomplete list. I will come back when i use new command.
@@ -10,31 +10,35 @@ This is a incomplete list. I will come back when i use new command.
 
 ## file system
 
-1. ls:    list directory contents. 
-1. cd:    change current directory
-1. pwd:   print working directory
-1. touch: create a new empty file
-1. chmod: change mode of file
-1. chown: change own of file
-1. chgrp:
-1. vim:   edit a file
-1. rm:    remove a file
-1. mv:    move a file; rename is a kind of move; move=cut+paste
-1. cp:    copy a file
-1. rsync: pull file from remote host or push file to remote host
-1. fgetacl:
-1. fsetacl:
+1. ls:      list directory contents. 
+1. cd:      change current directory
+1. pwd:     print working directory
+1. touch:   create a new empty file
+1. chmod:   change mode of file
+1. chown:   change own of file
+1. chgrp:   change group ownership
+1. vim:     edit a file
+1. rm:      remove a file
+1. mv:      move a file; rename is a kind of move; move=cut+paste
+1. cp:      copy a file
+1. rsync:   pull file from remote host or push file to remote host
+1. mkdir:   make a new dir
+1. rmdir:   remove a dir
+1. ln:      make a hard/symbolic link
+1. fgetacl: get access control list of a file
+1. fsetacl: set access control list of a file
 
 # file content manipulate
-1. head
-1. tail
-1. cat
-1. more
-1. less
-1. cut
-1. join
+1. head: read head lines of a file
+1. tail: read tail lines of a file
+1. cat:  concatenate files
+1. more: display file content in paging mode
+1. less: display file content in paging mode and support move forward and backward.
+1. cut:  print selected parts of lines
+1. join: join lines on a common field
 1. wc: count word or line of a file
 1. split: split files by lines, by size or by number of chunks
+1. tr: translate, squeeze, and/or delete characters
 
 ## administrator
 
