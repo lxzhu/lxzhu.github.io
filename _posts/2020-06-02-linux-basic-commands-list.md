@@ -49,10 +49,9 @@ Anyway this is my simple list
 
 ## administrator
 
-1. getent: get entries of administrator database
+1. getent: get entries of administrator database. for example, getent passwd get a list of users information
 1. export: set environment
 1. crontab: edit cron table file
-
 ## misc
 
 1. echo: print text or environment variable
@@ -62,7 +61,6 @@ Anyway this is my simple list
 
 ## user info
 1. who:
-1. genent passwd: 
 
 ## logic
 1. test: check file types and compare values
