@@ -29,6 +29,8 @@ Anyway this is my simple list
 1. ln:      make a hard/symbolic link
 1. fgetacl: get access control list of a file
 1. fsetacl: set access control list of a file
+1. basename: strip directory and suffix from a file name
+1. dirname: strip last file name component
 
 # file content manipulate
 1. head: read head lines of a file
@@ -38,9 +40,12 @@ Anyway this is my simple list
 1. less: display file content in paging mode and support move forward and backward.
 1. cut:  print selected parts of lines
 1. join: join lines on a common field
+1. sort: sort lines of a file
+1. uniq: remove adjacent duplicated lines of a file
 1. wc: count word or line of a file
 1. split: split files by lines, by size or by number of chunks
 1. tr: translate, squeeze, and/or delete characters
+1. tee: redirect output to multiple files or processes
 
 ## administrator
 
@@ -51,4 +56,17 @@ Anyway this is my simple list
 ## misc
 
 1. echo: print text or environment variable
-1. 
+1. date: show date time
+1. uname: print system information
+
+
+## user info
+1. who:
+1. genent passwd: 
+
+## logic
+1. test: check file types and compare values
+1. expr: evaluate expressions
+
+# network
+1. hostname: the hostname of current 
