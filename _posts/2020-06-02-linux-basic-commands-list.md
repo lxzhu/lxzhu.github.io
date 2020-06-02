@@ -48,7 +48,7 @@ Anyway this is my simple list
 1. tee: redirect output to multiple files or processes
 1. base64: encode content to base64 or decode from base64 file
 1. tar: archive files
-1. gzip: compare a file 
+1. gzip: compress a file 
 1. gpg: encrypt a file
 
 ## administrator
