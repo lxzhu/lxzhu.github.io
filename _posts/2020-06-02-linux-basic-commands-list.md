@@ -46,6 +46,10 @@ Anyway this is my simple list
 1. split: split files by lines, by size or by number of chunks
 1. tr: translate, squeeze, and/or delete characters
 1. tee: redirect output to multiple files or processes
+1. base64: encode content to base64 or decode from base64 file
+1. tar: archive files
+1. gzip: compare a file 
+1. gpg: encrypt a file
 
 ## administrator
 
