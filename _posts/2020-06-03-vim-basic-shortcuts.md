@@ -64,7 +64,7 @@ tags: [vim]
 | n| next match forward |
 |N | next match backward|
 
-## save & exit
+## save and exit
 
 | command | explanation |
 | ------: | ------ |
@@ -74,16 +74,22 @@ tags: [vim]
 |:w !sudo tee %| save editing with sudo permission. this is used when you forget to start vim with sudo. </br>:w write the conent to the buffer, </br>! starts a shell command. </br>tee writes buffer to a file; </br>% is the current file name. </br>so the command is  write content to buffer and then run sudo tee {current file name} in a shell to write buffer into file.|
 
 ## common options
-vim read ~/.vimrc for each user
+vim read ~/.vimrc when you open vim. .vimrc file is a file with a list of vim commands that will be executed. In .vimrc file, the command does not need a :prefix. for example to enable line number, you type :set number in editor, but just *set number* in .vimrc. 
 
-| options & command | explanation |
+It is suggested to backup .vimrc before you edit it. 
+
+| command | explanation |
 | ------: | ------ |
 |:set number <br/> :set nu <br/>:set nonumber<br/>:set number!<br/>:set nu!|:set number and :set nu to show line number; <br/>:set nonumber to hide line number;<br/>:set number! and :set nu! to toggle line number.|
+|:syntax on|show syntax highlighter|
+|:set showcmd| show partial command on the bottome of the screen, so you know what command have you typed.|
+|:set ruler|Display the cursor position on the last line of the screen or in the status line of a window.|
+|:remap<br/> :noremap</br>:nnoremap|remap means *re*cursive map, so if you map a to b, and c to a, then c wil be executed as b. <br/>noremap is *no*n-*re*cursive map; <br/>nnoremap is noremap in *n*ormal mode. vim has *n*ormal model, *v*isual mode and possible other modes.|
 
-
-
-## help
+## help and misc
 
 | command | explanation |
 | ------: | ------ |
 |:help xyz| show help about xyz|
+
+
