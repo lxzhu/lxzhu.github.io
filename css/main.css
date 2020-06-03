@@ -93,7 +93,27 @@ hr.small {
     display: none;
 }
 
+::-moz-selection {
+    color: blue;
+    text-shadow: none;
+    background-color: {
+        {
+            site.hover-col
+        }
+    }
+    ;
+}
 
+::selection {
+    color: blue;
+    text-shadow: none;
+    background-color: {
+        {
+            site.hover-col
+        }
+    }
+    ;
+}
 
 img::selection {
     color: white;
