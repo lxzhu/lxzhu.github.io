@@ -1,3 +1,8 @@
+---
+title: Vim Basic Shortcuts
+tags: [vim]
+---
+
 ## Switch mode
 1. esc: Switch to command mode
 1. i: Switch to insert mode
