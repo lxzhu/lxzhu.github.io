@@ -57,5 +57,5 @@ tags: [vim]
 |  :w| write |
 |  :q| quit |
 | :q!| quit without saving |
-|:w !sudo tee %| save editing with sudo permission. this is used when you forget to start vim with sudo. </br>:w write the conent to the buffer, ! starts a shell command. and tee write content from buffer to file; % is the current file name. so the command is  write content to buffer and then run sudo tee {current file name} in a shell to write buffer into file.|
+|:w !sudo tee %| save editing with sudo permission. this is used when you forget to start vim with sudo. </br>:w write the conent to the buffer, </br>! starts a shell command. </br>tee writes buffer to a file; </br>% is the current file name. </br>so the command is  write content to buffer and then run sudo tee {current file name} in a shell to write buffer into file.|
 
