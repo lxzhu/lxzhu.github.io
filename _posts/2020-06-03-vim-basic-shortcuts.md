@@ -1,5 +1,6 @@
 ---
 title: Vim Basic Shortcuts
+subtitle: move cursor in file and search, cut, copy, paste, delete etc
 tags: [vim]
 ---
 
