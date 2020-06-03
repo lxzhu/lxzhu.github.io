@@ -4,8 +4,11 @@ tags: [vim]
 ---
 
 ## Switch between command mode and editing mode
-1. esc: Switch to command mode
-1. i: Switch to insert mode
+
+| command | explanation |
+| ------: | ------ |
+| esc| Switch to command mode |
+| i  | Switch to insert mode |
 
 # move cursor in command mode
 
@@ -47,7 +50,9 @@ tags: [vim]
 ##search
 
 ##save & exit
-1.  :w: write
-1.  :q: quit
-1. :q!: quit without saving
-1. 
+| command | explanation |
+| ------: | ------ |
+|  :w| write |
+|  :q| quit |
+| :q!| quit without saving |
+
