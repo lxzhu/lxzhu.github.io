@@ -26,7 +26,8 @@ tags: [vim]
 |  j | jump forward one line  |
 | nj | jump forward n line. for example 3j  |
 |  G | jump to the end of the file  |
-| 1G | jump to the begining of the file. the same as gg  |
+| nG | jump to the nth line of the file.|
+| 1G | jump to the first line of the file. the same as gg  |
 | gg | jump to the begining of the file. the same as 1G  |
 | `` | two backticks, return to the cursor position before the latest jump (undo the jump) |
 | mx | set mark x at current cursor. the mark name x must be single character |
@@ -47,10 +48,23 @@ tags: [vim]
 | p | paste after current cursor|
 | P | paste before the current cursor|
 
+## copy to system clipboard
 
-##search
+| command | explanation |
+| ------: | ------ |
+|"*|"* is the primary system clipboard. so <br/>"*yy will copy current line to system clipboard <br/> "*y3j will copy 3 lines forward.|
 
-##save & exit
+
+## search in file
+
+| command | explanation |
+| ------: | ------ |
+| /term| search term forward |
+| ?term| search term backward|
+| n| next match forward |
+|N | next match backward|
+
+## save & exit
 
 | command | explanation |
 | ------: | ------ |
@@ -59,3 +73,17 @@ tags: [vim]
 | :q!| quit without saving |
 |:w !sudo tee %| save editing with sudo permission. this is used when you forget to start vim with sudo. </br>:w write the conent to the buffer, </br>! starts a shell command. </br>tee writes buffer to a file; </br>% is the current file name. </br>so the command is  write content to buffer and then run sudo tee {current file name} in a shell to write buffer into file.|
 
+## common options
+vim read ~/.vimrc for each user
+
+| options & command | explanation |
+| ------: | ------ |
+|:set number <br/> :set nu <br/>:set nonumber<br/>:set number!<br/>:set nu!|:set number and :set nu to show line number; <br/>:set nonumber to hide line number;<br/>:set number! and :set nu! to toggle line number.|
+
+
+
+## help
+
+| command | explanation |
+| ------: | ------ |
+|:help xyz| show help about xyz|
