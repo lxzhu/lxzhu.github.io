@@ -30,15 +30,16 @@ tags: [vim]
 1.  %: jump to matched brace.
 
 ## cut, delete, copy & paste
+
 | command | explaination |
-|------|------|
-|x|delete a char|
-|d|delete. this is a start of delete command expression. in a command expression, you need to specify command, number, direction with unit. for example,  d3l means delete three chars forward; d3h means to delete three chars backward;  d2j delete 2 lines forward; d3k means to delete three lines back;|
-|dd|delete current line|
-|y| yank(copy) command starts|
-|yy| yank(copy) current line|
-|p| paste after current cursor|
-|P| paste before the current cursor|
+| ------: | ------ |
+| x |delete a char|
+| d |delete. this is a start of delete command expression. in a command expression, you need to specify command, number, direction with unit. for example,  d3l means delete three chars forward; d3h means to delete three chars backward;  d2j delete 2 lines forward; d3k means to delete three lines back;|
+| dd |delete current line|
+| y | yank(copy) command starts|
+| yy| yank(copy) current line|
+| p | paste after current cursor|
+| P | paste before the current cursor|
 
 
 ##search
