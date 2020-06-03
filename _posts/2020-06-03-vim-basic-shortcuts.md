@@ -8,8 +8,8 @@ tags: [vim]
 
 | command | explanation |
 | ------: | ------ |
-| esc| Switch to command mode |
-| i  | Switch to insert mode |
+| esc| Switch to command mode. Now you type commands |
+| i  | Switch to insert mode. Now you can input |
 
 # move cursor in command mode
 
@@ -84,12 +84,13 @@ It is suggested to backup .vimrc before you edit it.
 |:syntax on|show syntax highlighter|
 |:set showcmd| show partial command on the bottome of the screen, so you know what command have you typed.|
 |:set ruler|Display the cursor position on the last line of the screen or in the status line of a window.|
+|:set cmdheight=2|set height of command window to 2 lines so that you can see more information. This is important when the command output something like "Press Enter to continue".|
 |:remap<br/> :noremap</br>:nnoremap|remap means *re*cursive map, so if you map a to b, and c to a, then c wil be executed as b. <br/>noremap is *no*n-*re*cursive map; <br/>nnoremap is noremap in *n*ormal mode. vim has *n*ormal model, *v*isual mode and possible other modes.|
 
-## help and misc
+## help
 
 | command | explanation |
 | ------: | ------ |
 |:help xyz| show help about xyz|
 
-
+At last, I suggest use [screen](https://www.gnu.org/software/screen/){:target="__blank"} to split window into two parts so you can edit in top part and type shell command in foot part.
