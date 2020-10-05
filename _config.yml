@@ -5,7 +5,7 @@
 
 # If you are building a simple GitHub user page (https://username.github.io) then use these settings:
 #url: "https://lxzhu.github.io"
-url: "https://www.simarts.net"
+url: "https://git.lxzhu.net"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -15,10 +15,10 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Liangxiong's
+title: Cogito, ergo sum
 
 # Short description of your site
-description: Keep it simple!
+description: In the beginning was the code
 
 # --- Navigation bar options --- #
 
@@ -28,7 +28,7 @@ navbar-links:
   Resources:
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
-  Author's home: "https://www.simarts.net"
+  Author's home: "https://git.lxzhu.net"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -97,7 +97,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "www.simarts.net"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "git.lxzhu.net"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
