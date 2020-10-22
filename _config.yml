@@ -15,10 +15,10 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Cogito, ergo sum
+title: In the beginning was the code
 
 # Short description of your site
-description: In the beginning was the code
+description: C#, Asp.Net, Azure, SQLServer
 
 # --- Navigation bar options --- #
 
