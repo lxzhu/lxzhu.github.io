@@ -25,7 +25,7 @@ description: C#, Asp.Net, Azure, SQLServer
 # List of links in the navigation bar
 navbar-links:
   About: "aboutme"
-  KB:
+  Links:
     - Jekyll: "https://jekyllrb.com/docs/"
     - HTTP/1.1: "https://tools.ietf.org/html/rfc2616"
   Author's home: "https://lxzhu.github.io"
