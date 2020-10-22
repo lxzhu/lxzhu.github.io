@@ -3,6 +3,8 @@ title: How to capture unhandled exception in asp.net core mvc
 tags: [asp.net core]
 ---
 
+Your action method may throw exception and you do not want to write try catch in each action method. Then you need an ExceptionFilterAttribute.
+
 ```csharp
 public class IOExceptionFilterAttribute : ExceptionFilterAttribute
 {
