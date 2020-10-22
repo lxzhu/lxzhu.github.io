@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Zhu Liangxiong
+title: Liangxiong Zhu
 subtitle: lxzhu@outlook.com
 ---
 
-My name is Zhu Liangxiong. I have 15 years of experience in programming and 9 years of experience as a System Architect.
+My name is Liangxiong Zhu. I have 15 years of experience in programming and 9 years of experience as a System Architect.
 
 ## Skillset: 
 
