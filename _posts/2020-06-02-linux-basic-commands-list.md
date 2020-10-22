@@ -1,5 +1,5 @@
 ---
-title: Linux Basic Commands
+title: Linux basic commands
 tags: [Linux]
 ---
 
