@@ -4,8 +4,8 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (https://username.github.io) then use these settings:
-#url: "https://lxzhu.github.io"
-url: "https://git.lxzhu.net"
+url: "https://lxzhu.github.io"
+#url: "https://git.lxzhu.net"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -24,11 +24,11 @@ description: C#, Asp.Net, Azure, SQLServer
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
-  Author's home: "https://git.lxzhu.net"
+  About: "aboutme"
+  KB:
+    - Jekyll: "https://jekyllrb.com/docs/"
+    - HTTP/1.1: "https://tools.ietf.org/html/rfc2616"
+  Author's home: "https://lxzhu.github.io"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
