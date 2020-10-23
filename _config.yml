@@ -26,7 +26,7 @@ description: C#, Asp.Net, Azure, SQLServer
 navbar-links:
   About: "aboutme"
   Links:
-    - How to write a post: "https://lxzhu.github.io/2020-02-10-howto-write-post"
+    - Markdown: "https://lxzhu.github.io/2020-02-10-howto-write-post"
     - Jekyll: "https://jekyllrb.com/docs/"
     - HTTP/1.1: "https://tools.ietf.org/html/rfc2616"
   Author's home: "https://lxzhu.github.io"
