@@ -36,7 +36,7 @@ avatar: "/img/zhuliangxiong.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-title-img: /img/avatar-icon.png
+title-img: /img/lxzhu_home.svg
 
 # --- Background colour/image options --- #
 
@@ -160,7 +160,7 @@ timezone: "America/Vancouver"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 20
 
 kramdown:
   input: GFM
