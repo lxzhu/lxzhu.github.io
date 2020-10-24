@@ -26,11 +26,10 @@ common-ext-js:
     {% include gtm_body.html %}
   
     {% include nav.html %}
-
+{{ page | inspect }}
     {{ content }}
     
-    {% include toc.html html=content %}
-    
+    {{ layout | inspect }}
     {% include footer.html %}
   
     {% include footer-scripts.html %}
