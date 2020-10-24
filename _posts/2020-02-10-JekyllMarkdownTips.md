@@ -84,11 +84,10 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 1. add into page.js for js inside your github repo
 
 For example, in this post, i can use moment.js. 
-<div>Current moment is:<span id="now"/></div>
+<div>Current moment is: <span id="now"/></div>
   
 <script>
  document.addEventListener("DOMContentLoaded", function(event) { 
     $("#now").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
  }); 
 </script>
-
