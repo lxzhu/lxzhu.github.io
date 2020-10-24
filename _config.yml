@@ -25,13 +25,13 @@ description: C#, Asp.Net, Azure, SQLServer
 # List of links in the navigation bar
 navbar-links:
   About: "aboutme"
-  Links:
-    - Markdown: "https://lxzhu.github.io/2020-02-10-howto-write-post"
+  RFCs:
     - HTTP/1.1: "https://tools.ietf.org/html/rfc2616"
   QuickRefs:
     - jekyll_cheat_sheet: "https://learn-the-web.algonquindesign.ca/topics/jekyll-cheat-sheet/"
     - Markdown-YAML: "https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/"
     - mathjax: "https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference"
+    - Markdown: "2020-02-10-JekyllMarkdownTips.md"
   Author's home: "https://lxzhu.github.io"
 
 # Image to show in the navigation bar - image must be a square (width = height)
