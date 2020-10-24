@@ -87,8 +87,8 @@ For example, in this post, i can use moment.js.
 <div>Current moment is:<span id="now"/></div>
   
 <script>
-  $(document).ready(function(){
-     $("#now").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
-  }); 
+ document.addEventListener("DOMContentLoaded", function(event) { 
+    $("#now").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+ }); 
 </script>
 
