@@ -26,6 +26,9 @@ common-ext-js:
     {% include gtm_body.html %}
   
     {% include nav.html %}
+    {% if page.layout == 'post' %}
+      {% include toc.html %}
+    {% endif %}
     
     {{ content }}
     
