@@ -1,5 +1,5 @@
 ---
-title: How to inject dependencies into attribute in asp.net core
+title: Inject dependencies into attribute in asp.net core
 tags: [asp.net core, attribute, dependency injection]
 ---
 
