@@ -1,5 +1,5 @@
 ---
-title: How to output remote ip address in log4net
+title: Output remote ip address in log4net
 tags: [asp.net core, log4net]
 ---
 This post records how do i output client ip in log4net in my asp.net core website.
