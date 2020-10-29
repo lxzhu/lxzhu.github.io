@@ -1,5 +1,5 @@
 ---
-title: How to capture unhandled exception in asp.net core mvc
+title: Capture unhandled exception in asp.net core mvc
 tags: [asp.net core]
 ---
 
