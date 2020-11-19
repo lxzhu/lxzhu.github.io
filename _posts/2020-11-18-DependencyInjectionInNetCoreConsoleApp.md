@@ -2,6 +2,9 @@
 title: Dependency Injection in .net core console app
 tags: [.net core, DI]
 ---
+
+This post is about how to use dependency injection in a .netcore console app.
+
 ```csharp
     class Program
     {
