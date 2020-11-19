@@ -3,6 +3,8 @@ title: Mediator pattern in asp.net core
 tags: [asp.net core, mediator, pattern]
 ---
 
+This post is about how to use Mediator pattern in asp.net. It is not finished yet.
+
 ```csharp
 [ScopedService(typeof(IMediator))]
 public class Mediator : IMediator, IAsyncMediator
