@@ -5,6 +5,9 @@ tags: [asp.net core, mediator, pattern]
 
 This post is about how to use Mediator pattern in asp.net. It is not finished yet.
 
+When a http request arrives an action method. The action method should get IMediator with [FromServices], and then construct an request, and send request to the its handler via Mediator.
+
+
 ```csharp
 [ScopedService(typeof(IMediator))]
 public class Mediator : IMediator, IAsyncMediator
