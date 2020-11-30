@@ -1,6 +1,6 @@
 ---
 title: Quick PowerShell Tips
-tags: [PowerShell, Test-Path,Get-Item,Get-ChildItem,Get-Content,Remove-Item, Select-Object, Sort-Object, ForEach, Get-Member, $_, $PSVersionTable] 
+tags: [PowerShell, Test-Path,Get-Item,Get-ChildItem,Get-Content,Remove-Item, Select-Object, Sort-Object,Select-String, ForEach, Get-Member, $_, $PSVersionTable] 
 ---
 
 This post contains some basic information about PowerShell. For example: How to get the version of the powershell environment? 
@@ -173,4 +173,10 @@ Length           Property              int Length {get;}
 |---|---|---|
 |Test-Path| test if a path exists |test-path "C:\Users\lxzhu"|
 
+## Equivalent Cmdlets
+
+|cmd|equivalent|description|examples|
+|---|---|---|---|
+|cat|cat|output file into shell pipe| cat log.txt|
+|Select-String|grep|search string|cat log.txt \| Select-String -Pattern "UpdateReplyMessage" >> UpdateReplyMessage.txt|
 ...
