@@ -183,4 +183,4 @@ Length           Property              int Length {get;}
 |---|---|---|---|
 |cat|cat|output file into shell pipe| cat log.txt|
 |Select-String|grep|search string|cat log.txt \| Select-String -Pattern "UpdateReplyMessage" >> UpdateReplyMessage.txt|
-...
+
