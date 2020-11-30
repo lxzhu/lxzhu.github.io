@@ -1,5 +1,5 @@
 ---
-title: Quick PowerShell Tips
+title: PowerShell Quick Tips
 tags: [PowerShell, Test-Path,Get-Item,Get-ChildItem,Get-Content,Remove-Item, Select-Object, Sort-Object,Select-String, ForEach, Get-Member, $_, $PSVersionTable] 
 ---
 
