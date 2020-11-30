@@ -175,6 +175,9 @@ Length           Property              int Length {get;}
 |Get-Item| get file info from a path | |
 |Get-ChildItem| get files and subdirectories | |
 |Get-Content| read content of file | |
+|Set-Content| output content in pipe to a file | |
+|Select-String|search string in pipe, work with cat or Get-Content to search in file|cat log.txt \| Select-String -Pattern "UpdateReplyMessage"|
+|New-Item| create new file or new directory| new-item -item-type 'file' -path '.' -name 'example.log'; new-item -item-type 'directory' -path '.' -name 'newdir' |
 |Remove-Item| delete a directory or file | |
 
 ## Equivalent Cmdlets
