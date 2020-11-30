@@ -172,6 +172,10 @@ Length           Property              int Length {get;}
 |cmd|description|examples|
 |---|---|---|
 |Test-Path| test if a path exists |test-path "C:\Users\lxzhu"|
+|Get-Item| get file info from a path | |
+|Get-ChildItem| get files and subdirectories | |
+|Get-Content| read content of file | |
+|Remove-Item| delete a directory or file | |
 
 ## Equivalent Cmdlets
 
