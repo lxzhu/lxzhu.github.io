@@ -1,6 +1,7 @@
 ---
 title: 傲慢与偏见 第一章
 image: /assets/images/pride-and-prejudice.jpg
+category: 傲慢与偏见
 ---
  
 
