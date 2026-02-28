@@ -1,9 +1,12 @@
-<ul class="list-unstyled">
-    {% assign categories = site.categories | sort %}
-    {% for category in categories %}
-    <li>
-        <a class="text-decoration-none" target="_blank" href="/pages/category/{{ category[0] }}">{{ category[0] }} <span
-                class="badge bg-secondary">{{ category[1].size }}</span></a>
-    </li>
-    {% endfor %}
-</ul>
+<div class="mb-3">
+    <h2>文章分类</h2>
+    <ul class="list-unstyled">
+        {% assign categories = site.categories | sort %}
+        {% for category in categories %}
+        <li>
+            <a class="text-decoration-none" target="_blank" href="/pages/category/{{ category[0] }}">{{ category[0] }}
+                <span class="badge bg-secondary">{{ category[1].size }}</span></a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
