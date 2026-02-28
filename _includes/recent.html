@@ -1,0 +1,11 @@
+<div class="mb-3"></div>
+<h2>最近更新</h2>
+<ul class="list-unstyled">
+    {% assign recent_posts = site.posts | sort: 'date' | reverse | slice: 0, 10 %}
+    {% for post in recent_posts %}
+    <li>
+        <a href="{{ post.url }}" class="text-decoration-none" target="_blank">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+</div>
