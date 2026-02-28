@@ -11,7 +11,7 @@
       var categoryMatch = path.match(/^\/(category|pages\/category)\/(.+)$/);
       if (categoryMatch) {
         // Fetch the category SPA handler
-        fetch('/pages/category/index.html')
+        fetch('/pages/category/index.html?q=' + encodeURIComponent(categoryMatch[2]))
           .then(function(response) { return response.text(); })
           .then(function(html) {
             // Replace the entire HTML document
