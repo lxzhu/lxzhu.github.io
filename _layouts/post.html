@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ site.lang | default: " en-US" }}" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {% seo %}
+  {% include head.html %}
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    {% include head-nav.html %}
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>{{ page.title }}</h1>
+        <p class="text-body-secondary">by {{ page.author | default: "浑水摸鱼" }} {{ page.date | date: "%Y-%m-%d" }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-10 post-content">
+        {{ content }}
+      </div>
+
+      <div class="col-md-2 d-md-block mb-3">
+        {% include sidebar.html %}
+      </div>
+    </div>
+    <div class="row">
+      <nav class="col-12 col-md-8 post-nav">
+        <ul class="pagination justify-content-between">
+          <li class="page-item {% if page.previous == nil %}disabled{% endif %}">
+            <a class="page-link" href="{{ page.previous.url }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo; 上一篇</span>
+            </a>
+          </li>
+          <li class="page-item {% if page.next == nil %}disabled{% endif %}">
+            <a class="page-link" href="{{ page.next.url }}" aria-label="Next">
+              <span aria-hidden="true">下一篇 &raquo;</span>
+            </a>
+          </li>
+    </div>
+    {% include foot.html %}
+  </div>
+</body>
+
+</html>

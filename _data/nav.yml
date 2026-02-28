@@ -1,0 +1,10 @@
+- name: 资源
+  subitems:
+  - name: GitHub
+    link: https://github.com
+  - name: Jekyll
+    link: https://jekyllrb.com
+- name: 悦读
+  link: /pages/audio
+- name: 关于
+  link: /pages/about

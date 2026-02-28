@@ -1,0 +1,48 @@
+<div id="title" class="text-center">
+    <h1><a href="{{ site.baseurl }}/" class="text-decoration-none">{{ site.title | default: site.github.repository_name
+            }}</a></h1>
+    <p>{{ site.tagline | default: site.description | default: site.github.project_tagline }}</p>
+</div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary navbar-fixed-top mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ site.baseurl }}/" target="_blank">{{ site.title | default: site.github.repository_name }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {% for item in site.data.nav %}
+                {% if item.link %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ item.link }}" target="_blank">{{ item.name }}</a>
+                </li>
+                {% else %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        {{ item.name }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        {% for subitem in item.subitems %}
+                        {% if subitem.link %}
+                        <li><a class="dropdown-item" href="{{ subitem.link }}" target="_blank">{{ subitem.name }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endif %}
+
+                {% endfor %}
+
+
+            </ul>
+            <form class="d-flex" role="search" action="{{ site.baseurl }}/pages/search" method="get">
+                <input class="form-control me-2" type="search" placeholder="搜索" aria-label="Search"
+                    id="search-input" name="q"/>
+                <button class="btn btn-outline-success" type="submit" id="search-button">搜索</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<hr>

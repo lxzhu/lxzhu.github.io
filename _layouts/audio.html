@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ site.lang | default: " en-US" }}" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {% seo %}
+
+    {% include head.html %}
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+    <script>
+        $(window).on("load", function () {
+            GreenAudioPlayer.init({
+                selector: '.audio-player',
+                stopOthersOnPlay: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        {% include head-nav.html %}
+        <ul class="list-group list-group-nostyle">
+
+            {% for audio in site.static_files %}
+            {% if audio.path contains "assets/audio" %}
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{ audio.basename }}</div>
+                    <div class="audio-player">
+                        <audio>
+                            <source src="{{ audio.path | relative_url }}" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+        {% include foot.html %}
+    </div>
+
+</body>
+
+</html>

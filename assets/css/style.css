@@ -1,0 +1,28 @@
+
+body {
+    --bs-body-font-size: 1.5rem;
+}
+
+.post-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 2rem;
+}
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+.card-table {
+   table-layout: fixed; /* Forces equal column widths */
+   width: 100%; /* Ensures table spans full container */
+}
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.card-text {
+    font-size: 0.75rem;    
+    overflow: hidden; /* Hides overflow content */
+    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
