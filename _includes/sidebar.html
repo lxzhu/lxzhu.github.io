@@ -1,9 +1,4 @@
-<div class="sidebar">
-    <ul class="list-unstyled">
-        {% for post in site.posts %}
-        <li>
-            <a href="{{ post.url }}" class="text-decoration-none" target="_blank">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+<div class="sidebar"></div>
+{% include recent.html %}
+{% include categories.html %}
 </div>
