@@ -16,9 +16,10 @@
                 category =new URL(window.location).pathname
                 .split('/').pop();
             }
+            category=decodeURIComponent(category);
             console.log('category:', category);
             if (category) {
-                document.getElementById('search-input').value = category;
+                
                 window.fetch('/assets/data/posts.json')
                     .then(response => response.json())
                     .then(data => {

@@ -1,0 +1,13 @@
+<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		分类
+	</a>
+	<ul class="dropdown-menu">
+		{% assign categories = site.categories | sort %}
+		{% for category in categories %}
+			<li>
+				<a class="dropdown-item" href="/pages/category/{{ category[0] }}">{{ category[0] }} <span class="badge bg-secondary">{{ category[1].size }}</span></a>
+			</li>
+		{% endfor %}
+	</ul>
+</li>
