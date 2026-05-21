@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<article class="post">
+  <header>
+    <h1>{{ page.title | default('Untitled Post') }}</h1>
+    {% if page.date %}<p>{{ page.date }}</p>{% endif %}
+    {% if page.category %}<p>Category: {{ page.category }}</p>{% endif %}
+  </header>
+  {{ content | safe }}
+</article>
+{% endblock %}

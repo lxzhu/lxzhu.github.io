@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include 'head.html' %}
+  <style>
+    :root { --bg: #f7f7f7; --text: #1f2937; --brand: #0369a1; --card: #ffffff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: var(--bg); color: var(--text); }
+    .wrap { width: min(1000px, 92vw); margin: 0 auto; }
+    .site-header, .site-footer { background: #ffffff; border-bottom: 1px solid #e5e7eb; }
+    .site-footer { border-top: 1px solid #e5e7eb; border-bottom: 0; margin-top: 3rem; }
+    .site-header .wrap, .site-footer .wrap { padding: 1rem 0; }
+    .brand { color: var(--brand); font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+    .nav-list { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0.75rem 0 0 0; }
+    .nav-list ul { list-style: disc; margin: 0.4rem 0 0 1.2rem; padding: 0; }
+    main.wrap { background: var(--card); margin-top: 1.5rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; }
+    a { color: var(--brand); }
+  </style>
+</head>
+<body>
+  {% include 'header.html' %}
+  <main class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+  {% include 'footer.html' %}
+</body>
+</html>

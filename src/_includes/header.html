@@ -1,0 +1,25 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">{{ site.data.env.title | default('Site') }}</a>
+    <nav>
+      <ul class="nav-list">
+        {% for item in site.data.nav | default([]) %}
+          <li>
+            {% if 'link' in item and item.link %}
+              <a href="{{ item.link }}">{{ item.name }}</a>
+            {% else %}
+              <span>{{ item.name }}</span>
+            {% endif %}
+            {% if 'subitems' in item and item.subitems %}
+              <ul>
+                {% for sub in item.subitems %}
+                  <li><a href="{{ sub.link }}">{{ sub.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
