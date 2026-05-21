@@ -1,0 +1,27 @@
+- symbol: BABA
+  market: NYSE
+  price: 157.7
+  fee: 1.25
+  share: 25
+  trade: buy
+  broker: CharlesSchwab
+  currency: USD
+  note: weekly accumulation
+- symbol: GOOGL
+  market: NASDAQ
+  price: 180.9
+  fee: 1.9
+  share: 12
+  trade: sell
+  broker: CharlesSchwab
+  currency: USD
+  note: risk rebalance
+- symbol: MSFT
+  market: NASDAQ
+  price: 92.8
+  fee: 1.4
+  share: 15
+  trade: buy
+  broker: CharlesSchwab
+  currency: USD
+  note: value add

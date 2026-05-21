@@ -1,0 +1,27 @@
+- symbol: AMZN
+  market: NASDAQ
+  price: 94.8
+  fee: 1.75
+  share: 30
+  trade: buy
+  broker: Fidelity
+  currency: USD
+  note: weekly accumulation
+- symbol: META
+  market: NASDAQ
+  price: 131.6
+  fee: 1.5
+  share: 24
+  trade: sell
+  broker: Fidelity
+  currency: USD
+  note: risk rebalance
+- symbol: AAPL
+  market: NASDAQ
+  price: 62.2
+  fee: 2.3
+  share: 12
+  trade: buy
+  broker: Fidelity
+  currency: USD
+  note: value add

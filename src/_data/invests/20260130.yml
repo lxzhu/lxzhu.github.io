@@ -1,0 +1,27 @@
+- symbol: GOOGL
+  market: NASDAQ
+  price: 105.9
+  fee: 1.75
+  share: 15
+  trade: buy
+  broker: Robinhood
+  currency: USD
+  note: weekly accumulation
+- symbol: MSFT
+  market: NASDAQ
+  price: 140.3
+  fee: 2.7
+  share: 16
+  trade: sell
+  broker: Robinhood
+  currency: USD
+  note: risk rebalance
+- symbol: TSLA
+  market: NASDAQ
+  price: 67.6
+  fee: 1.7
+  share: 21
+  trade: buy
+  broker: Robinhood
+  currency: USD
+  note: value add

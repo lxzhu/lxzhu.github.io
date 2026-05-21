@@ -1,25 +1,33 @@
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="/">{{ site.data.env.title | default('Site') }}</a>
-    <nav>
-      <ul class="nav-list">
-        {% for item in site.data.nav | default([]) %}
-          <li>
-            {% if 'link' in item and item.link %}
-              <a href="{{ item.link }}">{{ item.name }}</a>
-            {% else %}
-              <span>{{ item.name }}</span>
-            {% endif %}
-            {% if 'subitems' in item and item.subitems %}
-              <ul>
-                {% for sub in item.subitems %}
-                  <li><a href="{{ sub.link }}">{{ sub.name }}</a></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
+<header class="site-header bg-white">
+  <div class="container py-3 text-center text-lg-start">
+    <a class="navbar-brand fs-3 fw-semibold d-inline-block" href="/">{{ site.env.title | default('Site') }}</a>
+    <p class="text-muted mb-0">{{ site.env.tagline | default('Built with pysite') }}</p>
   </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-3 px-lg-4">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% for item in site.nav | default([]) %}
+            {% if 'subitems' in item and item.subitems %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.name }}</a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  {% for sub in item.subitems %}
+                    <li><a class="dropdown-item" href="{{ sub.link }}">{{ sub.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ item.link if 'link' in item else '#' }}">{{ item.name }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>

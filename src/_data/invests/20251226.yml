@@ -1,0 +1,27 @@
+- symbol: NVDA
+  market: NASDAQ
+  price: 87.4
+  fee: 2.25
+  share: 20
+  trade: buy
+  broker: InteractiveBrokers
+  currency: USD
+  note: weekly accumulation
+- symbol: AMZN
+  market: NASDAQ
+  price: 125.8
+  fee: 2.3
+  share: 16
+  trade: sell
+  broker: InteractiveBrokers
+  currency: USD
+  note: risk rebalance
+- symbol: META
+  market: NASDAQ
+  price: 58.6
+  fee: 1.7
+  share: 18
+  trade: buy
+  broker: InteractiveBrokers
+  currency: USD
+  note: value add

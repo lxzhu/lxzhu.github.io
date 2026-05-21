@@ -1,5 +1,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.env.title | default('Site') }}</title>
-<meta name="description" content="{{ site.data.env.tagline | default('Static site') }}" />
-<link rel="stylesheet" href="/assets/site.css" />
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.env.title | default('Site') }}</title>
+<meta name="description" content="{{ site.env.tagline | default('Static site') }}" />
+<link rel="stylesheet" href="/_assets/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="/_assets/style.css" />

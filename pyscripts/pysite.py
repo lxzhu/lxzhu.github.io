@@ -207,6 +207,21 @@ def document_index_entry(document: Document) -> dict[str, Any]:
 	return entry
 
 
+def build_site_model(data_model: dict[str, Any], posts: list[Document], pages: list[Document]) -> dict[str, Any]:
+	"""Build site object with _data keys exposed as top-level properties."""
+	site_model: dict[str, Any] = {
+		"posts": [document_index_entry(item) for item in posts],
+		"pages": [document_index_entry(item) for item in pages],
+	}
+
+	for key, value in data_model.items():
+		if key in site_model:
+			LOGGER.warning("Skipping _data key '%s' because it conflicts with reserved site property.", key)
+			continue
+		site_model[key] = value
+	return site_model
+
+
 def render_documents(
 	env: Environment,
 	documents: list[Document],
@@ -223,7 +238,7 @@ def render_documents(
 
 		context = {
 			"site": site_model,
-			"data": site_model.get("data", {}),
+			"data": site_model,
 			"page": page_meta,
 			"post": page_meta if document.kind == "post" else None,
 		}
@@ -276,6 +291,148 @@ def copy_static_assets(src_root: Path, docs_root: Path) -> None:
 			shutil.copy2(child, target)
 
 
+def build_invest_rows(site_model: dict[str, Any]) -> list[dict[str, Any]]:
+	"""Build normalized invest rows for frontend consumption."""
+	invests = site_model.get("invests")
+	stocks = site_model.get("stocks")
+	if not isinstance(invests, dict):
+		return []
+
+	stocks_by_market: dict[str, Any] = stocks if isinstance(stocks, dict) else {}
+	rows: list[dict[str, Any]] = []
+	for trade_date in sorted(invests.keys()):
+		transactions = invests.get(trade_date)
+		if not isinstance(transactions, list):
+			continue
+
+		for tx in transactions:
+			if not isinstance(tx, dict):
+				continue
+
+			market = str(tx.get("market", "") or "")
+			symbol = str(tx.get("symbol", "") or "")
+			market_stocks = stocks_by_market.get(market)
+			stock_name = ""
+			if isinstance(market_stocks, dict):
+				name_value = market_stocks.get(symbol)
+				stock_name = str(name_value) if name_value is not None else ""
+
+			display_name = stock_name or symbol or "-"
+			rows.append(
+				{
+					"trade_date": str(trade_date),
+					"symbol": symbol,
+					"name": display_name,
+					"market": market,
+					"trade": tx.get("trade", ""),
+					"share": tx.get("share", ""),
+					"price": tx.get("price", ""),
+					"fee": tx.get("fee", ""),
+					"details": tx,
+				}
+			)
+
+	return rows
+
+
+def build_stock_rows(site_model: dict[str, Any]) -> list[dict[str, Any]]:
+	"""Build aggregated stock summary rows from transaction history."""
+	invests = site_model.get("invests")
+	stocks = site_model.get("stocks")
+	if not isinstance(invests, dict):
+		return []
+
+	stocks_by_market: dict[str, Any] = stocks if isinstance(stocks, dict) else {}
+	positions: dict[tuple[str, str], dict[str, Any]] = {}
+
+	def _to_float(value: Any) -> float:
+		try:
+			return float(value)
+		except (TypeError, ValueError):
+			return 0.0
+
+	for trade_date in sorted(invests.keys()):
+		transactions = invests.get(trade_date)
+		if not isinstance(transactions, list):
+			continue
+
+		for tx in transactions:
+			if not isinstance(tx, dict):
+				continue
+
+			market = str(tx.get("market", "") or "")
+			symbol = str(tx.get("symbol", "") or "")
+			key = (market, symbol)
+			position = positions.setdefault(
+				key,
+				{
+					"market": market,
+					"symbol": symbol,
+					"name": "",
+					"share": 0.0,
+					"cost": 0.0,
+					"net_cash_flow": 0.0,
+					"profit": 0.0,
+				},
+			)
+
+			market_stocks = stocks_by_market.get(market)
+			if isinstance(market_stocks, dict):
+				name_value = market_stocks.get(symbol)
+				if name_value is not None:
+					position["name"] = str(name_value)
+
+			qty = _to_float(tx.get("share"))
+			price = _to_float(tx.get("price"))
+			fee = _to_float(tx.get("fee"))
+			trade = str(tx.get("trade", "") or "").lower()
+
+			if trade == "buy":
+				position["share"] += qty
+				position["cost"] += qty * price + fee
+				position["net_cash_flow"] += qty * price + fee
+			elif trade == "sell":
+				held_share = position["share"]
+				held_cost = position["cost"]
+				cost_per_share = held_cost / held_share if held_share else 0.0
+				cost_released = min(qty, held_share) * cost_per_share
+				position["share"] -= qty
+				position["cost"] = max(held_cost - cost_released, 0.0)
+				position["net_cash_flow"] -= qty * price + fee
+				position["profit"] += qty * price - fee - cost_released
+
+	rows: list[dict[str, Any]] = []
+	for position in positions.values():
+		name = position["name"] or position["symbol"] or "-"
+		share = position["share"]
+		net_cash_flow = position["net_cash_flow"]
+		rows.append(
+			{
+				"market": position["market"],
+				"symbol": position["symbol"],
+				"name": name,
+				"share": round(share, 2),
+				"avg_cost": round(net_cash_flow / share, 2) if share else None,
+				"profit": round(position["profit"], 2),
+			}
+		)
+
+	rows.sort(key=lambda row: (row["name"].casefold(), row["symbol"].casefold()))
+	return rows
+
+
+def write_invests_json(docs_root: Path, site_model: dict[str, Any]) -> None:
+	"""Write invests dataset JSON for frontend fetch usage."""
+	rows = build_invest_rows(site_model)
+	stock_rows = build_stock_rows(site_model)
+	output = docs_root / "_assets" / "data" / "invests.json"
+	output.parent.mkdir(parents=True, exist_ok=True)
+	output.write_text(
+		json.dumps({"transactions": rows, "stocks": stock_rows}, ensure_ascii=False),
+		encoding="utf-8",
+	)
+
+
 def build_site(src_root: Path, docs_root: Path, clean: bool = False) -> int:
 	"""Compile site from src into docs."""
 	posts_dir = src_root / "_posts"
@@ -305,15 +462,12 @@ def build_site(src_root: Path, docs_root: Path, clean: bool = False) -> int:
 	posts = collect_posts(posts_dir, src_root, docs_root)
 	pages = collect_pages(pages_dir, src_root, docs_root)
 
-	site_model = {
-		"data": data_model,
-		"posts": [document_index_entry(item) for item in posts],
-		"pages": [document_index_entry(item) for item in pages],
-	}
+	site_model = build_site_model(data_model=data_model, posts=posts, pages=pages)
 
 	render_documents(env, posts + pages, site_model)
 	write_documents(posts + pages)
 	copy_static_assets(src_root, docs_root)
+	write_invests_json(docs_root, site_model)
 
 	LOGGER.info("Build complete: %s posts, %s pages -> %s", len(posts), len(pages), docs_root)
 	return 0

@@ -1,0 +1,27 @@
+- symbol: META
+  market: NASDAQ
+  price: 161.4
+  fee: 1.75
+  share: 30
+  trade: buy
+  broker: InteractiveBrokers
+  currency: USD
+  note: weekly accumulation
+- symbol: AAPL
+  market: NASDAQ
+  price: 183.8
+  fee: 2.3
+  share: 16
+  trade: sell
+  broker: InteractiveBrokers
+  currency: USD
+  note: risk rebalance
+- symbol: NVDA
+  market: NASDAQ
+  price: 94.6
+  fee: 1.7
+  share: 18
+  trade: buy
+  broker: InteractiveBrokers
+  currency: USD
+  note: value add

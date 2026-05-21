@@ -1,0 +1,12 @@
+- symbol: NVDA
+  market: NASDAQ
+  price: 500.0
+  fee: 100
+  share: 1000
+  trade: buy
+- symbol: NVDA
+  market: NASDAQ
+  price: 500.0
+  fee: 100
+  share: 1000
+  trade: sell

@@ -1,0 +1,27 @@
+- symbol: MSFT
+  market: NASDAQ
+  price: 142.9
+  fee: 2.25
+  share: 35
+  trade: buy
+  broker: CharlesSchwab
+  currency: USD
+  note: weekly accumulation
+- symbol: TSLA
+  market: NASDAQ
+  price: 169.3
+  fee: 1.9
+  share: 16
+  trade: sell
+  broker: CharlesSchwab
+  currency: USD
+  note: risk rebalance
+- symbol: BABA
+  market: NYSE
+  price: 85.6
+  fee: 1.7
+  share: 15
+  trade: buy
+  broker: CharlesSchwab
+  currency: USD
+  note: value add

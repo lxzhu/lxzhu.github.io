@@ -1,0 +1,27 @@
+- symbol: AAPL
+  market: NASDAQ
+  price: 80
+  fee: 1.25
+  share: 10
+  trade: buy
+  broker: Fidelity
+  currency: USD
+  note: weekly accumulation
+- symbol: NVDA
+  market: NASDAQ
+  price: 120
+  fee: 1.5
+  share: 8
+  trade: sell
+  broker: Fidelity
+  currency: USD
+  note: risk rebalance
+- symbol: AMZN
+  market: NASDAQ
+  price: 55
+  fee: 1.1
+  share: 12
+  trade: buy
+  broker: Fidelity
+  currency: USD
+  note: value add

@@ -1,0 +1,70 @@
+---
+layout: page
+title: Invest Transactions
+---
+
+<link rel="stylesheet" href="/_assets/tabulator/tabulator_bootstrap5.min.css" />
+
+<section class="container-fluid px-0">
+	<ul class="nav nav-tabs mb-3" id="investsTabs" role="tablist">
+		<li class="nav-item" role="presentation">
+			<button class="nav-link active" id="transactions-tab" data-bs-toggle="tab" data-bs-target="#transactions-pane" type="button" role="tab" aria-controls="transactions-pane" aria-selected="true">Transactions</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="stocks-tab" data-bs-toggle="tab" data-bs-target="#stocks-pane" type="button" role="tab" aria-controls="stocks-pane" aria-selected="false">Stocks</button>
+		</li>
+	</ul>
+
+	<div class="tab-content">
+		<div class="tab-pane fade show active" id="transactions-pane" role="tabpanel" aria-labelledby="transactions-tab" tabindex="0">
+			<p class="text-muted mb-3">Filter and sort transactions by trade date and stock symbol.</p>
+
+			<div class="card shadow-sm mb-3">
+				<div class="card-body">
+					<div class="row g-3 align-items-end">
+						<div class="col-md-4">
+							<label for="filter-date" class="form-label">Filter by Trade Date</label>
+							<input id="filter-date" type="text" class="form-control" placeholder="yyyyMMdd (for example 20260521)" />
+						</div>
+						<div class="col-md-4">
+							<label for="filter-symbol" class="form-label">Filter by Stock Symbol</label>
+							<input id="filter-symbol" type="text" class="form-control" placeholder="for example NVDA" />
+						</div>
+						<div class="col-md-4">
+							<button id="reset-filters" type="button" class="btn btn-outline-secondary btn-sm mt-3">Reset Filters</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<div id="transactions-grid"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane fade" id="stocks-pane" role="tabpanel" aria-labelledby="stocks-tab" tabindex="0">
+			<p class="text-muted mb-3">Current holdings and realized profit aggregated from the transaction history.</p>
+
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<div id="stocks-grid"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="/_assets/tabulator/tabulator.min.js"></script>
+<script src="/_assets/javascripts/invests.js"></script>
+<script>
+	window.initInvestsPage({
+		transactionsGridElementId: "transactions-grid",
+		stocksGridElementId: "stocks-grid",
+		dataUrl: "/_assets/data/invests.json",
+		dateInputId: "filter-date",
+		symbolInputId: "filter-symbol",
+		resetButtonId: "reset-filters",
+	});
+</script>

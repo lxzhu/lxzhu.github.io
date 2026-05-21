@@ -5,44 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Audio | Whatever</title>
 <meta name="description" content="Just another Jekyll site" />
-<link rel="stylesheet" href="/assets/site.css" />  <style>
-    :root { --bg: #f7f7f7; --text: #1f2937; --brand: #0369a1; --card: #ffffff; }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: var(--bg); color: var(--text); }
-    .wrap { width: min(1000px, 92vw); margin: 0 auto; }
-    .site-header, .site-footer { background: #ffffff; border-bottom: 1px solid #e5e7eb; }
-    .site-footer { border-top: 1px solid #e5e7eb; border-bottom: 0; margin-top: 3rem; }
-    .site-header .wrap, .site-footer .wrap { padding: 1rem 0; }
-    .brand { color: var(--brand); font-size: 1.4rem; font-weight: 700; text-decoration: none; }
-    .nav-list { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0.75rem 0 0 0; }
-    .nav-list ul { list-style: disc; margin: 0.4rem 0 0 1.2rem; padding: 0; }
-    main.wrap { background: var(--card); margin-top: 1.5rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; }
-    a { color: var(--brand); }
-  </style>
-</head>
+<link rel="stylesheet" href="/_assets/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="/_assets/style.css" /></head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="/">Whatever</a>
-    <nav>
-      <ul class="nav-list">
-          <li>
-              <span>资源</span>
-              <ul>
-                  <li><a href="https://github.com">GitHub</a></li>
-                  <li><a href="https://jekyllrb.com">Jekyll</a></li>
-              </ul>
-          </li>
-          <li>
-              <a href="/pages/audio">悦读</a>
-          </li>
-          <li>
-              <a href="/pages/about">关于</a>
-          </li>
-      </ul>
-    </nav>
+<header class="site-header bg-white">
+  <div class="container py-3 text-center text-lg-start">
+    <a class="navbar-brand fs-3 fw-semibold d-inline-block" href="/">Whatever</a>
+    <p class="text-muted mb-0">Just another Jekyll site</p>
   </div>
-</header>  <main class="wrap">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-3 px-lg-4">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">资源</a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="https://github.com">GitHub</a></li>
+                    <li><a class="dropdown-item" href="https://jekyllrb.com">Jekyll</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/audio">悦读</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/about">关于</a>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>  <main class="container-fluid site-main">
 <article class="page">
 <h1>Audio</h1>  <section>
   <h1>Audio</h1>
@@ -51,10 +46,11 @@
 </section>
 </article>
   </main>
-<footer class="site-footer">
-  <div class="wrap">
-    <p>Just another Jekyll site</p>
-    <p><a href="https://lxzhu.github.io">https://lxzhu.github.io</a></p>
+<footer class="site-footer border-top bg-white mt-5 py-4">
+  <div class="container text-muted small">
+    <p class="mb-1">Just another Jekyll site</p>
+    <p class="mb-0"><a href="https://lxzhu.github.io">https://lxzhu.github.io</a></p>
   </div>
-</footer></body>
+</footer>  <script src="/_assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
 </html>

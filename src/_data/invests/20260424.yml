@@ -1,0 +1,27 @@
+- symbol: TSLA
+  market: NASDAQ
+  price: 150.3
+  fee: 1.75
+  share: 15
+  trade: buy
+  broker: Robinhood
+  currency: USD
+  note: weekly accumulation
+- symbol: BABA
+  market: NYSE
+  price: 175.1
+  fee: 2.7
+  share: 24
+  trade: sell
+  broker: Robinhood
+  currency: USD
+  note: risk rebalance
+- symbol: GOOGL
+  market: NASDAQ
+  price: 89.2
+  fee: 2.3
+  share: 21
+  trade: buy
+  broker: Robinhood
+  currency: USD
+  note: value add

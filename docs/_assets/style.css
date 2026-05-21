@@ -1,0 +1,54 @@
+:root {
+	--bg: #f7f7f7;
+	--text: #1f2937;
+	--brand: #0369a1;
+	--card: #ffffff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", serif;
+	background: var(--bg);
+	color: var(--text);
+}
+
+
+.site-header,
+.site-footer {
+	background: #ffffff;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.site-header {
+	border-bottom: 0;
+}
+
+.site-footer {
+	border-top: 1px solid #e5e7eb;
+	border-bottom: 0;
+	margin-top: 3rem;
+}
+
+.navbar-brand {
+	color: var(--brand);
+}
+
+.nav-link,
+.dropdown-item,
+a {
+	color: var(--brand);
+}
+
+main.site-main {
+	background: var(--card);
+	margin-top: 1.5rem;
+	padding: 1.5rem;
+}
+
+#transactions-tbody tr.summary-row:hover > td {
+	background-color: #00bfff !important;
+}

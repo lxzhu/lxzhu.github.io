@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Invest Transactions | Whatever</title>
+<meta name="description" content="Just another Jekyll site" />
+<link rel="stylesheet" href="/_assets/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="/_assets/style.css" /></head>
+<body>
+<header class="site-header bg-white">
+  <div class="container py-3 text-center text-lg-start">
+    <a class="navbar-brand fs-3 fw-semibold d-inline-block" href="/">Whatever</a>
+    <p class="text-muted mb-0">Just another Jekyll site</p>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-3 px-lg-4">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">资源</a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="https://github.com">GitHub</a></li>
+                    <li><a class="dropdown-item" href="https://jekyllrb.com">Jekyll</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/audio">悦读</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/about">关于</a>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>  <main class="container-fluid site-main">
+<article class="page">
+<h1>Invest Transactions</h1>  <link rel="stylesheet" href="/_assets/tabulator/tabulator_bootstrap5.min.css" />
+
+<section class="container-fluid px-0">
+	<ul class="nav nav-tabs mb-3" id="investsTabs" role="tablist">
+		<li class="nav-item" role="presentation">
+			<button class="nav-link active" id="transactions-tab" data-bs-toggle="tab" data-bs-target="#transactions-pane" type="button" role="tab" aria-controls="transactions-pane" aria-selected="true">Transactions</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="stocks-tab" data-bs-toggle="tab" data-bs-target="#stocks-pane" type="button" role="tab" aria-controls="stocks-pane" aria-selected="false">Stocks</button>
+		</li>
+	</ul>
+
+	<div class="tab-content">
+		<div class="tab-pane fade show active" id="transactions-pane" role="tabpanel" aria-labelledby="transactions-tab" tabindex="0">
+			<p class="text-muted mb-3">Filter and sort transactions by trade date and stock symbol.</p>
+
+			<div class="card shadow-sm mb-3">
+				<div class="card-body">
+					<div class="row g-3 align-items-end">
+						<div class="col-md-4">
+							<label for="filter-date" class="form-label">Filter by Trade Date</label>
+							<input id="filter-date" type="text" class="form-control" placeholder="yyyyMMdd (for example 20260521)" />
+						</div>
+						<div class="col-md-4">
+							<label for="filter-symbol" class="form-label">Filter by Stock Symbol</label>
+							<input id="filter-symbol" type="text" class="form-control" placeholder="for example NVDA" />
+						</div>
+						<div class="col-md-4">
+							<button id="reset-filters" type="button" class="btn btn-outline-secondary btn-sm mt-3">Reset Filters</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<div id="transactions-grid"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane fade" id="stocks-pane" role="tabpanel" aria-labelledby="stocks-tab" tabindex="0">
+			<p class="text-muted mb-3">Current holdings and realized profit aggregated from the transaction history.</p>
+
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<div id="stocks-grid"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="/_assets/tabulator/tabulator.min.js"></script>
+<script src="/_assets/javascripts/invests.js"></script>
+<script>
+	window.initInvestsPage({
+		transactionsGridElementId: "transactions-grid",
+		stocksGridElementId: "stocks-grid",
+		dataUrl: "/_assets/data/invests.json",
+		dateInputId: "filter-date",
+		symbolInputId: "filter-symbol",
+		resetButtonId: "reset-filters",
+	});
+</script>
+</article>
+  </main>
+<footer class="site-footer border-top bg-white mt-5 py-4">
+  <div class="container text-muted small">
+    <p class="mb-1">Just another Jekyll site</p>
+    <p class="mb-0"><a href="https://lxzhu.github.io">https://lxzhu.github.io</a></p>
+  </div>
+</footer>  <script src="/_assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

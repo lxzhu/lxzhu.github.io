@@ -1,6 +1,6 @@
-<footer class="site-footer">
-  <div class="wrap">
-    <p>{{ site.data.env.tagline | default('Built with pysite') }}</p>
-    <p><a href="{{ site.data.env.url | default('/') }}">{{ site.data.env.url | default('/') }}</a></p>
+<footer class="site-footer border-top bg-white mt-5 py-4">
+  <div class="container text-muted small">
+    <p class="mb-1">{{ site.env.tagline | default('Built with pysite') }}</p>
+    <p class="mb-0"><a href="{{ site.env.url | default('/') }}">{{ site.env.url | default('/') }}</a></p>
   </div>
 </footer>
